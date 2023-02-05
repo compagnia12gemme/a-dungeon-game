@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguagePrefix }}">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	{{ hugo.Generator }}
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+
+	{{- $mainCSS := resources.Get "css/a-dungeon-game.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" type="text/css" href="{{ $mainCSS.Permalink }}" integrity="{{ $mainCSS.Data.Integrity }}" />
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+
+	<link rel="icon" type="image/x-icon" href="{{ " favicon.ico" | absURL }}" />
+
+	<title>
+		{{- if .Page.Title }}{{ .Page.Title }} | {{ end -}}
+		a dungeon game | Loot The Room
+	</title>
+
+
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li class="logo"><img src="DungeonGameIcon.png" alt="A dragon made of triangles"></li>
+			<li><a href="index.html">home</a></li>
+			<li><a href="dungeon-characters.html">characters</a></li>
+			<li><a href="dungeon-advancement.html">advancement</a></li>
+			<li><a href="dungeon-magic.html">magic</a></li>
+			<li><a href="dungeon-actions.html">doing things</a></li>
+			<li><a href="dungeon-violence.html">violence</a></li>
+			<li><a href="dungeon-equipment.html">equipment</a></li>
+			<li><a href="dungeon-enemies.html">enemies</a></li>
+			<li><a href="https://loottheroom.uk">loot the room</a></li>
+			<li><a href="https://loottheroom.itch.io/a-dungeon-game">Download</a></li>
+			<li><a href="https://ko-fi.com/chrisbissette">tips</a></li>
+		</ul>
+	</nav>

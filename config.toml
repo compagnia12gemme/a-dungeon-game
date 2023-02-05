@@ -1,0 +1,18 @@
+title = 'a dungeon game'
+baseURL = 'https://a-dungeon-game.12gem.me/'
+
+languageCode = 'en-gb'
+defaultContentLanguage = 'en'
+enableMissingTranslationPlaceholders = true
+
+[Languages]
+
+[Languages.en]
+languageName = "English"
+languageCode = "en-gb"
+weight = 1
+
+[Languages.it]
+languageName = "Italiano"
+languageCode = "it"
+weight = 2
