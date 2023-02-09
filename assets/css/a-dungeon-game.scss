@@ -1,0 +1,54 @@
+@import "pure-3.0.0";
+@import "grids-responsive-3.0.0";
+
+#wrapper {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+
+    &.active #menu-toggle {
+        left: 150px;
+        width: 150px;
+    }
+}
+
+nav.primary {
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+@media (min-width: 48em) {
+    #wrapper {
+        padding-left: 150px; /* left col width "#menu" */
+        left: 0;
+
+        &.active {
+
+        }
+    }
+    
+    nav.primary {
+        left: 150px;
+    }
+
+    #menu-toggle {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+}

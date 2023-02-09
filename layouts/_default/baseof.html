@@ -19,33 +19,45 @@
 
 	<title>
 		{{- block "Title" . -}}
-		{{ .Site.Title }}
-		{{ end }} | Loot The Room
+			{{- .Site.Title -}}
+		{{- end }} | Loot The Room
 	</title>
 </head>
 
 <body>
-	<nav>
-		<ul>
-			<li class="logo"><img src="DungeonGameIcon.png" alt="A dragon made of triangles"></li>
-			<li><a href="index.html">home</a></li>
-			<li><a href="dungeon-characters.html">characters</a></li>
-			<li><a href="dungeon-advancement.html">advancement</a></li>
-			<li><a href="dungeon-magic.html">magic</a></li>
-			<li><a href="dungeon-actions.html">doing things</a></li>
-			<li><a href="dungeon-violence.html">violence</a></li>
-			<li><a href="dungeon-equipment.html">equipment</a></li>
-			<li><a href="dungeon-enemies.html">enemies</a></li>
-			<li><a href="https://loottheroom.uk">loot the room</a></li>
-			<li><a href="https://loottheroom.itch.io/a-dungeon-game">Download</a></li>
-			<li><a href="https://ko-fi.com/chrisbissette">tips</a></li>
-		</ul>
-	</nav>
+	<div id="wrapper">
+		<!-- Hamburger menu -->
+		<a href="#menu" id="menu-toggle" class="menu-link">
+			<span></span>
+		</a>
 
-	<div class="wrapper">
+		<nav class="primary">
+			<div class="pure-menu">
+				<img src="images/a-dungeon-game-icon.png" alt="A dragon made of triangles" />
+				<a class="pure-menu-heading" href="#company">a dungeon game</a>
 
-		{{ block "Main" . }}
-		{{ end }}
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="index.html">home</a></li>
+					<li class="pure-menu-item"><a href="dungeon-characters.html">characters</a></li>
+					<li class="pure-menu-item"><a href="dungeon-advancement.html">advancement</a></li>
+					<li class="pure-menu-item"><a href="dungeon-magic.html">magic</a></li>
+					<li class="pure-menu-item"><a href="dungeon-actions.html">doing things</a></li>
+					<li class="pure-menu-item"><a href="dungeon-violence.html">violence</a></li>
+					<li class="pure-menu-item"><a href="dungeon-equipment.html">equipment</a></li>
+					<li class="pure-menu-item"><a href="dungeon-enemies.html">enemies</a></li>
+					<li class="pure-menu-item"><a href="https://loottheroom.uk">loot the room</a></li>
+					<li class="pure-menu-item"><a href="https://loottheroom.itch.io/a-dungeon-game">Download</a></li>
+					<li class="pure-menu-item"><a href="https://ko-fi.com/chrisbissette">tips</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="main-content">
+
+			{{ block "Main" . }}
+			{{ end }}
+
+		</div>
 
 	</div>
 
