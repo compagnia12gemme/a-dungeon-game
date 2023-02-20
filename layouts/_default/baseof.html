@@ -29,6 +29,8 @@
 		<!-- Hamburger menu -->
 		<a href="#menu" id="menu-toggle" class="menu-link">
 			<span></span>
+			<span></span>
+			<span></span>
 		</a>
 
 		<nav class="primary">
@@ -62,5 +64,8 @@
 	</div>
 
 </body>
+
+{{- $navJS := resources.Get "js/navigation.js" | minify | fingerprint }}
+<script src="{{ $navJS.Permalink }}" integrity="{{ $navJS.Data.Integrity }}"></script>
 
 </html>

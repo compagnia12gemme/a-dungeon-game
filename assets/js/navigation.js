@@ -1,3 +1,31 @@
+const ready = (callback) => {
+    if(document.readyState != "loading")
+        callback();
+    else
+        document.addEventListener("DOMContentLoaded", callback);
+}
+
+function toggleClass(element, className) {
+    const classes = element.className.split(/\s+/);
+
+    const cleanedClasses = classes.filter(e => e !== className);
+
+    if (classes.length === cleanedClasses.length) {
+        cleanedClasses.push(className);
+    }
+
+    element.className = cleanedClasses.join(' ');
+}
+
+function handleNavClick() {
+    const body = document.querySelector('body');
+    toggleClass(body, 'active');
+}
+
+ready(() => { 
+    document.getElementById('menu-toggle').addEventListener('click', handleNavClick);
+});
+
 (function (window, document) {
 
     // we fetch the elements each time because docusaurus removes the previous
@@ -10,24 +38,7 @@
         };
     }
 
-    function toggleClass(element, className) {
-        var classes = element.className.split(/\s+/);
-        var length = classes.length;
-        var i = 0;
-
-        for (; i < length; i++) {
-            if (classes[i] === className) {
-                classes.splice(i, 1);
-                break;
-            }
-        }
-        // The className is not found
-        if (length === classes.length) {
-            classes.push(className);
-        }
-
-        element.className = classes.join(' ');
-    }
+    
 
     function toggleAll() {
         var active = 'active';
@@ -49,6 +60,6 @@
         }
     }
     
-    document.addEventListener('click', handleEvent);
+    // document.addEventListener('click', handleEvent);
 
 }(this, this.document));
