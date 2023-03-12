@@ -37,7 +37,7 @@ Determine them by rolling 3d6 in order. You may swap two results.
 
 ## Determine Health
 
-Roll 1d6 and add half your Brawn score (rounded down) to determine your starting health.
+Roll 1d6 and add half your _Brawn_ score (rounded down) to determine your starting health.
 
 {{< /section >}}
 
@@ -165,16 +165,16 @@ Instead of rolling 1d3 when attempting to learn a new Ritual, reduce your maximu
 
 Roll 2d6 and consult the list.
 
-    +1d3 Cunning
-    +1d3 Brawn
-    +1d3 Agility
-    +1d3 health points
-    -2 to saving throws vs Poison
-    -2 to saving throws vs Spells
-    +2d6 x 10sp
-    +2 AC, always
-    +1 to recovery rolls
-    +1 damage
-    Learn a Ritual without reducing health or attributes
+2. +1d3 Cunning
+2. +1d3 Brawn
+2. +1d3 Agility
+2. +1d3 health points
+2. -2 to saving throws vs Poison
+2. -2 to saving throws vs Spells
+2. +2d6 x 10sp
+2. +2 AC, always
+2. +1 to recovery rolls
+2. +1 damage
+2. Learn a Ritual without reducing health or attributes
 
 {{< /section >}}

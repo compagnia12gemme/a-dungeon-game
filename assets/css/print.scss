@@ -1,5 +1,24 @@
 @media print {
     html {
-        font-size: 12pt;
+        font-size: 10pt;
     }
+
+    .layout {
+        .main-content {
+            h1 {
+                font-size: 2rem;
+                margin: 0 0 1rem 0;
+                text-align: left;
+                line-height: 2rem;
+            }
+            h1, h2, h3 {
+                break-after: avoid;
+            }
+
+            .back-to-top {
+                display: none;
+            }
+        }
+    }
+
 }

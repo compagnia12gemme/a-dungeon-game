@@ -233,6 +233,38 @@ nav.primary {
 
         }
 
+        ul {
+
+        }
+
+        ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            line-height: 2.2rem;
+
+            li {
+                position: relative;
+                margin-left: 2.5rem;
+            }
+            li:before {
+                content: counter(list-item);
+                display: block;
+                width: 1.8rem;
+                height: 2rem;
+                background-image: url('/images/shape-d6.svg');
+                background-repeat: no-repeat;
+                background-size: 1.8rem 1.8rem;
+                background-position: 0 0.15rem;
+
+                position: absolute;
+                left: -2.5rem;
+
+                text-align: center;
+                font-family: $font-bold;
+            }
+        }
+
         .back-to-top {
             text-align: right;
         }
