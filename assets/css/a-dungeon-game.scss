@@ -1,7 +1,15 @@
+@import "montserrat-fonts";
 @import "pure-3.0.0";
 @import "grids-responsive-3.0.0";
 
+$font-regular: "montserratregular", "Montserrat", sans-serif;
+$font-bold: "montserratsemibold", "Montserrat", sans-serif;
+$font-black: "montserrat_alternatesblack", "Montserrat", sans-serif;
+$font-italic: "montserratitalic", "Montserrat", sans-serif;
+
 $menu-width: 300px;
+$main-width: 800px;
+$primary-background: #e3e9f7;
 $nav-background: #00272f;
 $round-radius-size: 0.5rem;
 
@@ -13,8 +21,16 @@ html {
 }
 
 body {
-    font-family: Montserrat, sans-serif;
-    background: #e3e9f7;
+    font-family: "montserratregular", "Montserrat", sans-serif;
+    background: $primary-background;
+}
+i, em {
+    font-family: $font-italic;
+    font-style: italic;
+}
+b, strong {
+    font-family: $font-bold;
+    font-weight: bold;
 }
 
 /* Animation support */
@@ -22,7 +38,7 @@ body {
     transition: left 300ms ease-out;
 }
 #menu-toggle span {
-    transition: transform 400ms ease-in-out, opacity 400ms linear;
+    transition: transform 400ms ease-in-out, opacity 200ms linear;
 }
 body.active {
     #wrapper {
@@ -32,13 +48,13 @@ body.active {
         left: $menu-width;
 
         span:nth-child(1) {
-            transform: scaleX(1.2) rotateZ(42deg);
+            transform: scaleX(1.1) rotateZ(-42deg);
         }
         span:nth-child(2) {
             opacity: 0;
         }
         span:nth-child(3) {
-            transform: scaleX(1.2) rotateZ(-42deg);
+            transform: scaleX(1.1) rotateZ(42deg);
         }
     }
     nav.primary {
@@ -76,10 +92,10 @@ body.active {
         opacity: 1;
     }
     span:nth-child(1) {
-        transform-origin: 0% 50%;
+        transform-origin: 100% 50%;
     }
     span:nth-child(3) {
-        transform-origin: 0% 50%;
+        transform-origin: 100% 50%;
     }
 }
 
@@ -97,7 +113,8 @@ nav.primary {
     a.header {
         display: block;
         margin: 1rem 0.5rem 2rem 0.5rem;
-        font-size: 0.8rem;
+        font-family: $font-black;
+        font-size: 0.9rem;
         color: #eee;
         text-transform: uppercase;
         text-decoration: none;
@@ -158,16 +175,15 @@ nav.primary {
 
 .main-content {
     margin: 0 auto;
-    padding: 0 2em;
-    max-width: 800px;
+    padding: 0 2rem;
+    max-width: $main-width;
     margin-bottom: 50px;
     line-height: 1.6em;
 }
 
-/*
-@media (min-width: 48em) {
+@media (min-width: ($menu-width + $main-width)) {
     #wrapper {
-        padding-left: 150px;
+        padding-left: $menu-width;
         left: 0;
 
         &.active {
@@ -176,13 +192,10 @@ nav.primary {
     }
     
     nav.primary {
-        left: 150px;
+        left: $menu-width;
     }
 
     #menu-toggle {
-        position: fixed;
-        left: 150px;
         display: none;
     }
 }
-*/
