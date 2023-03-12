@@ -2,12 +2,14 @@
 @import "grids-responsive-3.0.0";
 
 $menu-width: 300px;
+$nav-background: #00272f;
+$round-radius-size: 0.5rem;
 
 html {
     width: 100%;
     overflow-x: hidden;
 
-    font-size: 10px;
+    font-size: 20px;
 }
 
 body {
@@ -17,7 +19,10 @@ body {
 
 /* Animation support */
 #wrapper, #menu-toggle, nav.primary {
-    transition: left 0.25s ease-out;
+    transition: left 300ms ease-out;
+}
+#menu-toggle span {
+    transition: transform 400ms ease-in-out, opacity 400ms linear;
 }
 body.active {
     #wrapper {
@@ -25,6 +30,16 @@ body.active {
     }
     #menu-toggle {
         left: $menu-width;
+
+        span:nth-child(1) {
+            transform: scaleX(1.2) rotateZ(42deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: scaleX(1.2) rotateZ(-42deg);
+        }
     }
     nav.primary {
         left: $menu-width;
@@ -35,21 +50,17 @@ body.active {
     position: relative;
     left: 0;
     padding-left: 0;
-
-    &.active #menu-toggle {
-        left: 150px;
-        width: 150px;
-    }
 }
 
 #menu-toggle {
     position: fixed;
     left: 0;
     top: 0;
-    width: 2em;
-    height: 2em;
-    background: white;
-    padding: 0.5em;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $nav-background;
+    border-radius: 0 0 $round-radius-size 0;
+    padding: $round-radius-size;
 
     display: flex;
     flex-direction: column;
@@ -58,10 +69,17 @@ body.active {
     span, span:before, span:after {
         position: relative;
         display: block;
-        background: black;
+        background: #fff;
         pointer-events: none;
         width: 100%;
-        height: 0.2em;
+        height: 0.15rem;
+        opacity: 1;
+    }
+    span:nth-child(1) {
+        transform-origin: 0% 50%;
+    }
+    span:nth-child(3) {
+        transform-origin: 0% 50%;
     }
 }
 
@@ -73,8 +91,26 @@ nav.primary {
     left: 0;
     bottom: 0;
     z-index: 1000;
-    background: #00272f;
+    background: $nav-background;
     overflow-y: auto;
+
+    a.header {
+        display: block;
+        margin: 1rem 0.5rem 2rem 0.5rem;
+        font-size: 0.8rem;
+        color: #eee;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 60%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+    }
 
     ul {
         list-style: none;
@@ -87,10 +123,10 @@ nav.primary {
                 display: block;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size: 2rem;
+                font-size: 1rem;
                 color: #fff;
                 position: relative;
-                padding: 1rem 2rem;
+                padding: 0.5rem 0 0.5rem 1.5rem;
 
                 &:before {
                     content: '';
@@ -100,7 +136,7 @@ nav.primary {
                     width: 0;
                     height: 100%;
                     background: #e3e9f7;
-                    border-radius: 2rem 0 0 2rem;
+                    border-radius: $round-radius-size 0 0 $round-radius-size;
                     z-index: -1;
                     transition: all 300ms ease-in-out;
                 }
@@ -110,9 +146,12 @@ nav.primary {
                 color: #00272f;
 
                 &:before{
-                    width: 95%;
+                    width: calc(100% - 0.5rem);
                 }
             }
+        }
+        li+li {
+            margin-top: 0.5rem;
         }
     }
 }
