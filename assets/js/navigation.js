@@ -17,7 +17,9 @@ function toggleClass(element, className) {
     element.className = cleanedClasses.join(' ');
 }
 
-function handleNavClick() {
+function handleNavClick(event) {
+    event.preventDefault();
+
     const body = document.querySelector('body');
     toggleClass(body, 'active');
 }

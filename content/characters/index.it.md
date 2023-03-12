@@ -20,8 +20,6 @@ To create a character:
 
 Alternatively, use the random character generator at the bottom of this page.
 
-{{< section >}}
-
 ## Roll Attributes
 There are three attributes: Agility, Brawn, and Cunning.
 
@@ -31,17 +29,9 @@ There are three attributes: Agility, Brawn, and Cunning.
 
 Determine them by rolling 3d6 in order. You may swap two results.
 
-{{< /section >}}
-
-{{< section >}}
-
 ## Determine Health
 
 Roll 1d6 and add half your Brawn score (rounded down) to determine your starting health.
-
-{{< /section >}}
-
-{{< section >}}
 
 ## Roll an Occupation
 
@@ -67,10 +57,6 @@ You always roll with advantage when performing tasks related to your vocation.
 1. Trapper
 1. Undertaker
 1. Weaver
-
-{{< /section >}}
-
-{{< section >}}
 
 ## Choose Scars
 
@@ -143,10 +129,6 @@ Torso
 1. Your stomach was split open and poorly stitched, and now you have no visible belly button.
 1. After breaking all of your ribs on one side, a metal plate was grafted onto your bones. It shines through the hole in your missing flesh.
 
-{{< /section >}}
-
-{{< section >}}
-
 ## Learn Rituals (Optional)
 
 All characters can learn magic, but it comes at a cost. You can start with as many Rituals as you dare to learn. If you overextend yourself and your health or any attribute reaches 0, your character has died. Make a new one.
@@ -156,10 +138,6 @@ To learn a Ritual, roll on the Ritual Generator or choose something from another
 ### Spells from other games
 
 Instead of rolling 1d3 when attempting to learn a new Ritual, reduce your maximum health or one of your attributes by the level of the spell you are attempting to learn. Back to top
-
-{{< /section >}}
-
-{{< section >}}
 
 ## Roll an Extra
 
@@ -177,4 +155,4 @@ Roll 2d6 and consult the list.
     +1 damage
     Learn a Ritual without reducing health or attributes
 
-{{< /section >}}
+Back to top

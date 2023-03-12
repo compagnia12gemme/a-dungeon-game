@@ -25,7 +25,7 @@
 <body>
 	<div id="wrapper">
 		<!-- Hamburger menu -->
-		<a href="#menu" id="menu-toggle" class="menu-link">
+		<a href="#menu-toggle" id="menu-toggle" class="menu-link">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -33,13 +33,13 @@
 
 		<nav class="primary">
 			<div class="pure-menu">
-				<a href="index.html" title="A dungeon game homepage" class="header">
-					<img src="images/a-dungeon-game-icon.png" alt="A dragon made of triangles" />
+				<a href="{{ ref . "/" }}" title="A dungeon game homepage" class="header">
+					<img src="{{ "images/a-dungeon-game-icon.png" | absURL }}" alt="A dragon made of triangles" />
 					a dungeon game
 				</a>
 
 				<ul class="pure-menu-list">
-					<li class="pure-menu-item"><a href="dungeon-characters.html">Characters</a></li>
+					<li class="pure-menu-item"><a href="{{ ref . "/characters" }}">Characters</a></li>
 					<li class="pure-menu-item"><a href="dungeon-advancement.html">Advancement</a></li>
 					<li class="pure-menu-item"><a href="dungeon-magic.html">Magic</a></li>
 					<li class="pure-menu-item"><a href="dungeon-actions.html">Doing things</a></li>
@@ -56,8 +56,10 @@
 		<div class="layout">
 			<div class="main-content">
 
-			{{ block "Main" . }}
-			{{ end }}
+				<a id="top"></a>
+
+				{{ block "Main" . }}
+				{{ end }}
 
 			</div>
 

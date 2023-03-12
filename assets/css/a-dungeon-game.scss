@@ -15,17 +15,20 @@ $dark-background: #8ca6ab;
 $nav-background: #00272f;
 $round-radius-size: 0.5rem;
 
+$text-color: $nav-background;
+
 $margin-top: 1rem;
 
 html {
     width: 100%;
     overflow-x: hidden;
 
-    font-size: 20px;
+    font-size: 18px;
 }
 
 body {
     font-family: "montserratregular", "Montserrat", sans-serif;
+    color: $text-color;
     background: $primary-background;
 }
 i, em {
@@ -35,6 +38,16 @@ i, em {
 b, strong {
     font-family: $font-bold;
     font-weight: bold;
+}
+
+a {
+    color: $text-color;
+    text-decoration: underline;
+    transition: background 100ms linear, color 100ms linear;
+}
+a:hover {
+    color: $primary-background;
+    background: $text-color;
 }
 
 /* Animation support */
@@ -192,19 +205,35 @@ nav.primary {
         max-width: $main-width;
         flex-grow: 1;
     
-        line-height: 1.6em;
+        line-height: 1.6rem;
 
         h1 {
             font-family: $font-black;
             font-size: 2.4rem;
             margin: 4rem 0 3rem 0;
             text-align: center;
+            text-transform: uppercase;
+            line-height: 2.2rem;
         }
 
         h2 {
             font-family: $font-bold;
             font-size: 1.6rem;
             margin: 2rem 0 1rem 0;
+        }
+
+        h3 {
+            font-family: $font-bold;
+            font-size: 1.3rem;
+            margin: 1rem 0 1rem 0;
+        }
+
+        p {
+
+        }
+
+        .back-to-top {
+            text-align: right;
         }
     }
     
