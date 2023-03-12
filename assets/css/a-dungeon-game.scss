@@ -34,11 +34,11 @@ body {
 }
 i, em {
     font-family: $font-italic;
-    font-style: italic;
+    font-style: normal;
 }
 b, strong {
     font-family: $font-bold;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 a {
@@ -226,7 +226,7 @@ nav.primary {
         h3 {
             font-family: $font-bold;
             font-size: 1.3rem;
-            margin: 1rem 0 1rem 0;
+            margin: 2rem 0 1rem 0;
         }
 
         p {
