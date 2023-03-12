@@ -8,6 +8,7 @@
 
 	{{- $mainCSS := resources.Get "css/a-dungeon-game.scss" | toCSS | minify | fingerprint }}
 	<link rel="stylesheet" type="text/css" href="{{ $mainCSS.Permalink }}" integrity="{{ $mainCSS.Data.Integrity }}" />
+	<link rel="stylesheet" href="{{ "gutenberg.min.css" | absURL }}" media="print" />
 
 	<link rel="canonical" href="{{ .Permalink }}" />
 
